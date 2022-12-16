@@ -15,6 +15,16 @@ body {
 
 /* SECTIONS */
 
+.header {
+    padding-top: 50px;
+    justify-content: space-around;
+}
+
+.main {
+    justify-content: center;
+    gap: 100px;
+}
+
 .score {
     padding: 26px 0 0 0;
 }
@@ -31,9 +41,7 @@ body {
 /* FLEXBOX */
 
 #container {
-    padding-top: 50px;
     display: flex;
-    justify-content: space-around;
 }
 
 /* HEADERS */
@@ -67,4 +75,5 @@ h3 {
     height: 45px;
     font-size: 18px;
     padding: 10px;
+    cursor: pointer;
 }
