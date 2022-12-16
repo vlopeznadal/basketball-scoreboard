@@ -4,32 +4,38 @@
         <link href="style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <div id="container">
-            <div>
-                Winning: <span id="leader"></span>
-            </div>
-            <div id="home">
-                <h3>Home</h3>
-                <div id="home-score" class="counter">0</div>
-                <div class="score">
-                    <button id="home-1" class="score-btn">+1</button>
-                    <button id="home-2" class="score-btn">+2</button>
-                    <button id="home-3" class="score-btn">+3</button>
-                </div>
-            </div>
-            <div id="guest">
-                <h3>Guest</h3>
-                <div id="guest-score" class="counter">0</div>
-                <div class="score">
-                    <button id="guest-1" class="score-btn">+1</button>
-                    <button id="guest-2" class="score-btn">+2</button>
-                    <button id="guest-3" class="score-btn">+3</button>
-                </div>
-            </div>
-            <div>
+        <header>
+            <div id="container" class="header">
+                <p>Winning: <span id="leader"></span></p>
                 <button id="new-game" class="score-btn">New Game</button>
             </div>
-        </div>
+        </header>
+            <main>
+                <div id="container" class="main">
+                    <section>
+                        <div id="home">
+                            <h3>Home</h3>
+                            <div id="home-score" class="counter">0</div>
+                            <div class="score">
+                                <button id="home-1" class="score-btn">+1</button>
+                                <button id="home-2" class="score-btn">+2</button>
+                                <button id="home-3" class="score-btn">+3</button>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div id="guest">
+                            <h3>Guest</h3>
+                            <div id="guest-score" class="counter">0</div>
+                            <div class="score">
+                                <button id="guest-1" class="score-btn">+1</button>
+                                <button id="guest-2" class="score-btn">+2</button>
+                                <button id="guest-3" class="score-btn">+3</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
         <script src="index.js"></script>
     </body>
 </html>
