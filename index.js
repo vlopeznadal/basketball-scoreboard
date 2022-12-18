@@ -3,48 +3,32 @@ let homeScoreEl = document.getElementById("home-score")
 let guestScore = 0
 let guestScoreEl = document.getElementById("guest-score")
 
-document.getElementById("home-1").addEventListener("click", homeAddOne);
-document.getElementById("home-2").addEventListener("click", homeAddTwo);
-document.getElementById("home-3").addEventListener("click", homeAddThree);
+document.addEventListener("click", function(e){
+    if (e.target.id === "home-1"){
+        homeIncreaseScore(1)
+    } else if (e.target.id === "home-2"){
+        homeIncreaseScore(2)
+    } else if (e.target.id === "home-3"){
+        homeIncreaseScore(3)
+    } else if (e.target.id === "guest-1") {
+        guestIncreaseScore(1)
+    } else if (e.target.id === "guest-2") {
+        guestIncreaseScore(2)
+    } else if (e.target.id === "guest-3") {
+        guestIncreaseScore(3)
+    } else if (e.target.id === "new-game") {
+        newGame()
+    }
+})
 
-document.getElementById("guest-1").addEventListener("click", guestAddOne);
-document.getElementById("guest-2").addEventListener("click", guestAddTwo);
-document.getElementById("guest-3").addEventListener("click", guestAddThree);
-
-document.getElementById("new-game").addEventListener("click", newGame);
-
-function homeAddOne() {
-    homeScore++
+function homeIncreaseScore(score) {
+    homeScore += score
     homeScoreEl.textContent = homeScore
     showLeader()
 }
 
-function homeAddTwo() {
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-    showLeader()
-}
-
-function homeAddThree() {
-    homeScore += 3
-    homeScoreEl.textContent = homeScore
-    showLeader()
-}
-
-function guestAddOne() {
-    guestScore++
-    guestScoreEl.textContent = guestScore
-    showLeader()
-}
-
-function guestAddTwo() {
-    guestScore += 2
-    guestScoreEl.textContent = guestScore
-    showLeader()
-}
-
-function guestAddThree() {
-    guestScore += 3
+function guestIncreaseScore(score) {
+    guestScore+= score
     guestScoreEl.textContent = guestScore
     showLeader()
 }
